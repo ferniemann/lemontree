@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;700&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: black;
+}
+
+html {
+    font-size: 20px;
+}
+
+:root {
+    --mint: #8FDC97;
+    --brown: #59230E;
+}
+
+[hidden] {
+    display: none;
+}
+
+h1, h2, h3, h4, h5, h6, figcaption {
+    font-family: 'Roboto Slab';
+    text-transform: uppercase;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 12;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    user-select: none;
+    border-bottom: 10px solid var(--mint);
+}
+
+header > div {
+    height: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+    z-index: 12;
+}
+
+.header-shrink {
+    height: 80px;
+}
+
+.header-shrink .logo img {
+    width: 250px;
+    transition: .3s;
+}
+
+.header-shrink a {
+    font-size: 1rem;
+}
+
+nav {
+    width: 33%;
+    font-size: 1.2rem;
+    font-family: 'Roboto Slab';
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+nav a {
+    border-bottom: px solid transparent;
+    transition: .3s;
+    color: rgba(0,0,0,0.8)
+}
+
+#brands {
+    cursor: pointer;
+}
+
+#brands:focus {
+    color: rgba(0,0,0,1);
+    border-color: black;
+    transition: .3s;
+}
+
+nav a:hover {
+    border-color: var(--brown);
+    transition: .3s;
+}
+
+.sub-nav {
+    height: 250px;
+    z-index: 10;
+    background: white;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transition: .3s;
+    position: absolute;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    border-bottom: 10px solid var(--mint);
+}
+
+.sub-nav-wrapper {
+    height: 100%;
+    display: block;
+    width: 100%;
+}
+
+.sub-nav h3 {
+    height: 10%;
+}
+
+.brands {
+    height: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.brands img {
+    height: 120px;
+    opacity: .5;
+    transition: .3s;
+}
+
+.brands figure:hover > img {
+    opacity: 1;
+    transition: .3s;
+}
+
+.logo img {
+    width: 450px;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+}
+
+figure {
+    cursor: pointer;
+    transition: .3s;
+}
+
+figure:hover > figcaption {
+    border-bottom: 2px solid var(--brown);
+    transition: .3s;
+}
+
+figcaption {
+    margin-top: 1rem;
+    font-size: .8rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid transparent;
+}
+
+.hero {
+    height: 120vh;
+    position: relative;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+    position: absolute;
+    background: url("https://images.unsplash.com/photo-1555412654-72a95a495858?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
+    inset: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.table {
+    position: absolute;
+    bottom: 0;
+}
+
+.table > img {
+    width: 100%;
+}
+
+.bottles {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bottles img {
+    height: 700px;
+    filter: drop-shadow(0 0 10px black);
+}
+
+.divider {
+    background-image: url("../img/vecteezy_old-dark-wood-wall-texture-background_1259184.jpg");
+    height: 30vh;
+    position: relative;
+    margin-top: -5px;
+    box-shadow: inset 0 0 50px 50px #111;
+}
+
+.info {
+    height: 100vh;
+    background: #111;
+    padding-top: 2rem;
+}
+
+.logos {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.logos img {
+    width: 7%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    background: white;
+    padding: .25rem;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px #111;
+    filter: grayscale(100%) brightness(0.3);
+    transition: .3s;
+}
+
+.logos img:hover {
+    filter: grayscale(0%);
+    box-shadow: 0 0 10px 10px rgba(255,255,255,0.4);
+    transition: .3s;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Roboto Slab';
+    color: white;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: .4rem;
+    line-height: 2;
+}
+
+h1 span {
+    color: var(--mint);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.info h2 {
+    font-size: 1.5rem;
+    margin-top: -2rem;
+    line-height: 2;
+    font-family: 'Roboto Slab';
+    color: white;
+    text-align: center;
+    font-weight: 200;
+    text-transform: uppercase;
+};
